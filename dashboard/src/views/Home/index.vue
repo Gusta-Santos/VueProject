@@ -1,7 +1,7 @@
 <template>
     <CustomHeader
-        @create-account="handleAccountCreate"
-        @login="handleLogin"
+        @create-account="handleAccountCreate()"
+        @login="handleLogin()"
     />
     <contact/>
     <div class="flex justify-center py-10 bg-brand-gray">

@@ -3,10 +3,7 @@
   <router-view/>
 </template>
 
-<script>
+<script setup>
   import ModalFactory from './components/ModalFactory/index.vue'
-
-  export default {
-    components: { ModalFactory }
-  }
+  components: { ModalFactory }
 </script>
