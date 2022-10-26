@@ -32,7 +32,9 @@
         })
     }
     function handleAccountCreate () {
-
+        modal.open({
+            component: 'ModalCreateAccount'
+        })
     }
 
 </script>
