@@ -16,18 +16,20 @@ const httpClient = axios.create({
 
 httpClient.interceptors.request.use(config => {
   const token = window.localStorage.getItem('token')
+  console.log(config)
 
   if (token) {
-    config.headers.common.Authorization = `Bearer ${token}`
-  }  
+    config.headers.Authorization = `Bearer ${token}`
+  }
 
   return config
 })
 
 httpClient.interceptors.response.use((response) => response, (error) => {
   const canThrowAnError = error.request.status === 0 ||
-  error.request.stats === 500
-  if(canThrowAnError) {
+   error.request.status === 500
+
+  if (canThrowAnError) {
     throw new Error(error.message)
   }
   
