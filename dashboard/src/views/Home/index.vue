@@ -22,7 +22,7 @@
     onMounted(() => {
         const token = window.localStorage.getItem('token')
         if (token) {
-            router.push({ name: 'Feedbacks'})
+            router.push({ name: 'Credencials'})
         }
     })
 
